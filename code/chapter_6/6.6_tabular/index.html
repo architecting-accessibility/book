@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pets and more - Home</title>
+    <meta name="description" content="Pagina focandi indicati">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Primarium">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <h1>Pets and more</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Choosing a vet</h2>
+            <p>
+                Before choosing a vet, check whether the practice has experience with your dog's breed.
+            </p>
+            <p>
+                You may also contact us with additional information, to help you find the best fit:
+            </p>
+        </section>
+        <section>
+            <h2>Table</h2>
+            <div class="table-wrapper" tabindex="0" role="region"
+                aria-label="Orders table, scroll horizontally to see more columns">
+                <table>
+                    <caption>Orders placed in September</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Order</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Delivery address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">#100</th>
+                            <td>John Petrucci</td>
+                            <td>7 July 1992</td>
+                            <td>In Constant Motion</td>
+                            <td>€24.00</td>
+                            <td>8 Octavarium Road, Metropolis</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#101</th>
+                            <td>John Myung</td>
+                            <td>23 June 2009</td>
+                            <td>A Rite of Passage</td>
+                            <td>€13.00</td>
+                            <td>10 Black Clouds Way, Silver Linings</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">#102</th>
+                            <td>Mike Mangini</td>
+                            <td>13 September 2011</td>
+                            <td>Breaking All Illusions</td>
+                            <td>€12.25</td>
+                            <td>11 Dramatic Turn Lane</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2 id="orders-heading">Orders placed in September</h2>
+        
+            <p id="orders-help" class="hint">
+                Use the arrow keys to move between cells.
+                Hold Shift and use the arrow keys to extend the selection.
+                Use Control and Space to select a column.
+                Use Shift and Space to select a row.
+                Use Control and A to select all cells.
+            </p>
+
+            <div class="grid-actions"> 
+                <button type="button" class="button-secondary" id="select-all">Select all </button> 
+                <button type="button" class="button-secondary" id="deselect-all"> Deselect all </button>
+                <button type="button" class="button-secondary" id="copy-selection"> Copy selected cells </button> 
+            </div>
+        
+            <div class="grid-wrapper">
+                <table id="orders-grid" 
+                    role="grid"
+                    aria-multiselectable="true" 
+                    aria-labelledby="orders-heading"
+                    aria-describedby="orders-help">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Delivery address</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <th scope="row" tabindex="0" aria-selected="false">#150 </th>
+                            <td tabindex="-1" aria-selected="false"> Kevin Moore </td>
+                            <td tabindex="-1" aria-selected="false"> 7 July </td>
+                            <td tabindex="-1" aria-selected="false"> Pull Me Under </td>
+                            <td tabindex="-1" aria-selected="false"> €57.03 </td>
+                            <td tabindex="-1" aria-selected="false"> 6 Metropolis Street </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" tabindex="-1" aria-selected="false"> #151 </th>
+                            <td tabindex="-1" aria-selected="false"> Victoria Page </td>
+                            <td tabindex="-1" aria-selected="false"> 26 October </td>
+                            <td tabindex="-1" aria-selected="false"> Finally Free </td>
+                            <td tabindex="-1" aria-selected="false"> €77.06 </td>
+                            <td tabindex="-1" aria-selected="false"> 2 Scenes From Memory Lane </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" tabindex="-1" aria-selected="false"> #152 </th>
+                            <td tabindex="-1" aria-selected="false"> Nicholas Stone </td>
+                            <td tabindex="-1" aria-selected="false"> 29 January </td>
+                            <td tabindex="-1" aria-selected="false"> A Change of Seasons </td>
+                            <td tabindex="-1" aria-selected="false"> €42.00 </td>
+                            <td tabindex="-1" aria-selected="false"> 8 Octavarium Avenue </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>© Pets and more!</small></p>
+        <nav aria-label="Leggatum">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Social Media">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/li.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/in.png" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/fb.png" alt="Facebook" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            <small>Icons by
+                <a href="https://icons8.com/" target="_blank">Icons8</a>
+            </small>
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

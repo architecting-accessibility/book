@@ -1,0 +1,70 @@
+name: pa11y-book
+
+services:
+  mongo:
+    image: mongo:8.0
+    restart: unless-stopped
+    command:
+      - mongod
+      - --bind_ip_all
+    volumes:
+      - pa11y-mongo-data:/data/db
+    networks:
+      - database
+    healthcheck:
+      test:
+        - CMD
+        - mongosh
+        - --quiet
+        - --eval
+        - db.adminCommand('ping').ok
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PA11Y_DASHBOARD_VERSION: "5.2.0"
+    restart: unless-stopped
+    init: true
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: "4000"
+      NOINDEX: "true"
+      READONLY: "false"
+      WEBSERVICE_DATABASE: "mongodb://mongo:27017/pa11y-webservice"
+      WEBSERVICE_HOST: "0.0.0.0"
+      WEBSERVICE_PORT: "3000"
+      WEBSERVICE_CRON: "0 30 0 * * *"
+      WEBSERVICE_NUM_WORKERS: "2"
+      CHROMIUM_FLAGS: "--no-sandbox,--disable-setuid-sandbox"
+    ports:
+      - "127.0.0.1:4000:4000"
+    networks:
+      - frontend
+      - database
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "require('http').get('http://127.0.0.1:4000/health',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"
+      interval: 15s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  pa11y-mongo-data:
+
+networks:
+  frontend:
+  database:
+    internal: true
