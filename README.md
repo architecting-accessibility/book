@@ -1,6 +1,6 @@
 <img alt="Banner with text - Architecting web systems and applications that work for everyone, and go far beyond compliance" src="https://github.com/user-attachments/assets/1853cf5c-c215-4c2d-aebc-e0189da35cef" />
 
-# Architecting Accessibility — Companion Code
+# Architecting Accessibility - Companion Code
 
 This repository contains the examples, patterns, and exercises from *Architecting Accessibility* (Chris Porter - Manning).
 
@@ -10,21 +10,21 @@ The goal of this companion is not to provide working code that can be copied ove
 
 ## Repository Structure
 
-- `code` — Example code and listings used throughout the book, organized by chapter:
-  - `chapter_2/` — People, technologies and fundamental techniques
-  - `chapter_3/` — Make content easy to perceive
-  - `chapter_4/` — Make text easy to understand
-  - `chapter_5/` — Ensure effective navigation and interaction
+- `code` - Example code and listings used throughout the book, organized by chapter:
+  - `chapter_2/` - People, technologies and fundamental techniques
+  - `chapter_3/` - Make content easy to perceive
+  - `chapter_4/` - Make text easy to understand
+  - `chapter_5/` - Ensure effective navigation and interaction
   - ...
 
-- `guides` — Living manuals on various aspects, including:
-  - `DevTools` — Using DevTools for accessibility checks
+- `guides` - Living manuals on various aspects, including:
+  - `DevTools` - Using DevTools for accessibility checks
 
-- `helpers` — Helper scripts, including:
-  - `pa11y-dashboard` — Scripts to help you set up a Pa11y Dashboard instance using Docker
+- `helpers` - Helper scripts, including:
+  - `pa11y-dashboard` - Scripts to help you set up a Pa11y Dashboard instance using Docker
 
-- `templates` — Template files, including:
-  - `accessibility_scope_inventory_template` — An XLSX document to help you get started with an accessibility inventory exercise
+- `templates` - Template files, including:
+  - `accessibility_scope_inventory_template` - An XLSX document to help you get started with an accessibility inventory exercise
 
 Each chapter includes:
 - Before/after examples
