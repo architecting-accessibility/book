@@ -15,7 +15,8 @@ The goal of this companion is not to provide working code that can be copied ove
   - `chapter_3/` - Make content easy to perceive
   - `chapter_4/` - Make text easy to understand
   - `chapter_5/` - Ensure effective navigation and interaction
-  - ...
+  - `chapter_6/` - Help people complete tasks efficiently
+  - `chapter_7/` - Make the safest path the path of least resistance
 
 - `guides` - Living manuals on various aspects, including:
   - `DevTools` - Using DevTools for accessibility checks
