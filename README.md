@@ -20,17 +20,14 @@ The goal of this companion is not to provide working code that can be copied ove
 
 - `guides` - Living manuals on various aspects, including:
   - `DevTools` - Using DevTools for accessibility checks
+  - `Semantic HTML` - Semantic HTML cheat sheet
 
 - `helpers` - Helper scripts, including:
   - `pa11y-dashboard` - Scripts to help you set up a Pa11y Dashboard instance using Docker
 
 - `templates` - Template files, including:
+  - `accessibility_issue_template` - Accessibility issue reporting: recommended fields and guidance
   - `accessibility_scope_inventory_template` - An XLSX document to help you get started with an accessibility inventory exercise
-
-Each chapter includes:
-- Before/after examples
-- Code snippets from the book
-- Extended examples not shown in print
 
 ## How to Use This Repository
 
