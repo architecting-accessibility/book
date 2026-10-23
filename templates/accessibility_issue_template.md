@@ -1,4 +1,4 @@
-# Accessibility issue reporting: recommended fields
+# Accessibility issue reporting: recommended fields and guidance
 
 This guide describes the information to capture when reporting an accessibility issue in an issue tracker such as Jira, YouTrack, GitHub Issues, or Azure DevOps. It is **a reference for designing and writing tickets**, not a form that must be filled in here. Teams can adapt the field names and structure to their own workflows.
 
@@ -10,9 +10,9 @@ A useful accessibility issue report explains **what the barrier is, whom it affe
 | --- | --- |
 | **Summary** | A concise, specific description of the accessibility barrier, ideally identifying the affected element or behaviour. Describe the problem rather than using only a WCAG criterion as the title. **Example:** “Keyboard focus moves behind the open dialog.” |
 | **Location(s)** | The pages, URLs, routes, components, templates, journey steps, or code areas where the issue can be found. Include direct links where possible. |
-| **Known instances** | Other confirmed occurrences of the same issue. If it affects a shared component (for example, the site header), say so and indicate its likely reach. Distinguish confirmed instances from suspected ones. |
-| **Observed outcome** | What actually happens when the affected content or feature is used. Be specific and avoid interpreting the behaviour prematurely. |
-| **Expected result** | The accessible behaviour that should occur instead, phrased so it can be tested. |
+| **Known instances** | Confirmed occurrences of the same issue - listing specific elements affected by the issue. If it affects a shared component (for example, the site header), say so and indicate its likely reach. Distinguish confirmed instances from suspected ones. |
+| **Observed outcome** | What actually happens when the affected content or feature is used. Be specific and avoid interpreting the behavior prematurely. |
+| **Expected result** | The accessible behavior that should occur instead, phrased so it can be tested. |
 
 ## 2. Explain the accessibility impact
 
