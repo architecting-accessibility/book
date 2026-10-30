@@ -2,13 +2,15 @@
 
 # Architecting Accessibility - Companion Code
 
-This repository contains the examples, patterns, and exercises from *Architecting Accessibility* (Chris Porter - Manning).
-
-The goal of this companion is not to provide working code that can be copied over in some production site. It's to demonstrate how interfaces can be developed to be robust, semantic, and accessible by default.
+This repository contains code examples, templates, and guides accompanying the book [*Architecting Accessibility*](https://www.manning.com/books/architecting-accessibility) by [Chris Porter](https://www.um.edu.mt/profile/chrisporter) and published by [Manning Publications Co.](https://www.manning.com/).
 
 > Before building or acquiring technology, pause and think about the people who will use it. Every small detail can make a big difference in someone's life.
 
-## Repository Structure
+## About the repository
+
+The repository provides code examples (organized by chapter), guides, helper scripts, and templates.
+
+### Structure
 
 - `code` - Example code and listings used throughout the book, organized by chapter:
   - `chapter_2/` - People, technologies and fundamental techniques
@@ -29,9 +31,9 @@ The goal of this companion is not to provide working code that can be copied ove
   - `accessibility_issue_template` - Accessibility issue reporting: recommended fields and guidance
   - `accessibility_scope_inventory_template` - An XLSX document to help you get started with an accessibility inventory exercise
 
-## How to Use This Repository
+### Disclaimer
 
-This code is intentionally simple.
+> This code is intentionally simple. The goal of this companion is not to provide working code that can be copied over in some production site. Some examples deliberately demonstrate **inaccessible patterns**. These examples are included for educational purposes, **and should not** be used as templates to deploy or copy without review.
 
 You'll notice that:
 - **Native HTML elements** are preferred over custom components
@@ -41,6 +43,41 @@ You'll notice that:
 - **Simplified CSS** is used to improve readability 
 
 Some examples may look basic, and that is by design. The goal is to understand *why* things work, *what* approaches work best, and typical gotchas. 
+
+### Conventions
+
+- Each code example is self-contained, with its existing relative asset paths.
+- Repeated images and stylesheets remain local to their examples to keep the exercises independent.
+- Names such as `start.html` and `end.html` indicate their teaching role and state, **not** production readiness.
+- Most links in navigation areas (header and footer) are illustrative. For this reason, they commonly point to '#'.
+- There is deliberately no project-wide build framework. 
+- This book is designed to teach. Try out these examples using the conditions described in the book.
+
+## Running the examples locally
+
+The examples are standalone HTML pages that you can explore in your browser. Some may require a local web server to work as intended.
+
+### Recommended: Visual Studio Code with Live Server
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+2. Install the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+3. Open the repository folder in Visual Studio Code.
+4. Navigate to the example you want to explore.
+5. Right-click its HTML file and select **Open with Live Server**.
+
+Your browser will open the example automatically. Live Server also refreshes the page when you save changes.
+
+### Alternative: Python
+
+If you already have Python installed, you can start a local server from the repository's root directory:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open [http://localhost:8000](http://localhost:8000) in your browser and navigate to the example you want to explore.
+
+To stop the server, press `Ctrl+C` in your terminal.
 
 ## Pre-requisites
 
