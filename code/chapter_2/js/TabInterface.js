@@ -5,7 +5,7 @@ const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-co
 // Choose how keyboard navigation works:
 // - 'auto'   = arrow keys activate immediately
 // - 'manual' = arrow keys only move focus; Enter/Space activates
-const activationMode = 'auto'; // change to 'auto' if desired
+const activationMode = 'auto'; // change to 'manual' if desired
 
 initTabs();
 
@@ -16,6 +16,12 @@ function initTabs() {
     tabs.forEach((tab, index) => {
         tab.addEventListener('click', () => setActiveTab(index, { setFocus: true }));
         tab.addEventListener('keydown', (event) => onTabKeyDown(event, activationMode));
+        tab.addEventListener('focus', () => {
+            //In auto mode activate the tab whenever it receives focus.
+            if (activationMode === 'auto') {
+                setActiveTab(index, { setFocus: false }); //false: no need to call focus() again
+            }
+        });
     });
 }
 
@@ -42,13 +48,8 @@ function onTabKeyDown(event, mode) {
 
     event.preventDefault();
 
-    // In both modes, arrow keys move focus.
+    //In both modes, navigation keys (arrows/home/end) move focus.
     tabs[nextIndex].focus({ preventScroll: true });
-
-    // Only automatic mode activates on arrow navigation.
-    if (mode === 'auto') {
-        setActiveTab(nextIndex, { setFocus: false });
-    }
 }
 
 function getNextTabIndex(key, current, total) {
