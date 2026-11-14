@@ -89,7 +89,9 @@ h2 {
 }
 
 .lang-selector {
-    float: left;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    padding: 0.5rem;
 }
 
 .lang-selector a {
@@ -98,6 +100,7 @@ h2 {
 
 .lang-selector a[aria-current="page"] {
     text-decoration: underline;
+    text-underline-offset: 0.25em;
     font-weight: bold;
 }
 
