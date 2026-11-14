@@ -68,8 +68,9 @@
   a:focus-visible,
   button:focus-visible,
   input:focus-visible {
-      outline: 3px solid #000;
-      outline-offset: 4px;
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #000;
   }
 
   .cookie-banner {
